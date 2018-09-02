@@ -9,7 +9,7 @@ use Longman\TelegramBot\Entities\Message;
 use Longman\TelegramBot\Entities\Update;
 use Longman\TelegramBot\Request;
 use Longman\TelegramBot\Telegram;
-use WhereIsMyTeacherBot\Dictionary\TeacherDictionary;
+use WhereIsMyTeacherBot\ButterflyTable\TeacherTable;
 use WhereIsMyTeacherBot\Service\TeacherService;
 
 /**
@@ -56,7 +56,7 @@ class GenericmessageCommand extends SystemCommand
         $message = $this->getMessage();
         $answer = 'Вибачте, я не розумію вас. Команда /help допоможе вам';
 
-        $teachers = TeacherDictionary::getTeachers();
+        $teachers = TeacherTable::rows();
 
         if (\in_array($message->getText(), $teachers, true)) {
             $answer = $this->teacherService->getSchedule($message->getText());

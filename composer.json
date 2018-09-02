@@ -4,7 +4,8 @@
   "type": "project",
   "autoload": {
     "psr-4": {
-      "WhereIsMyTeacherBot\\": "WhereIsMyTeacherBot/"
+      "WhereIsMyTeacherBot\\": "WhereIsMyTeacherBot/",
+      "Butterfly\\": "Butterfly/"
     }
   },
   "require": {
@@ -12,7 +13,9 @@
     "longman/telegram-bot": "^0.44.1",
     "symfony/cache": "^4.1",
     "nesbot/carbon": "^1.32",
-    "fabpot/goutte": "^3.2"
+    "fabpot/goutte": "^3.2",
+    "doctrine/annotations": "^1.6",
+    "jms/serializer": "^1.13"
   },
   "require-dev": {
   }
